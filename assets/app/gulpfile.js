@@ -40,8 +40,6 @@ gulp.task('minify-img-png', function() {
 		.pipe(gulp.dest('../img'));
 });
 
-<<<<<<< HEAD
-=======
 //Javascript flexslider
 gulp.task('minify-js-flexslider', function (cb) {//task é uma tarefa, estamos criando uma tarefa
   pump([
@@ -75,7 +73,6 @@ gulp.task('minify-img-png-flexslider', function() {
         .pipe(gulp.dest('../banner/img'));
 });
 
->>>>>>> felipe_developer
 gulp.task('default', function () {
     //CSS 
     gulp.watch('css/*.css', ['minify-css']);
@@ -83,8 +80,6 @@ gulp.task('default', function () {
     gulp.watch('js/*.js', ['minify-js']);
     //IMG
     gulp.watch('img/*.jpg', ['minify-img-jpg']);
-<<<<<<< HEAD
-=======
 
     //CSS FlexSlider
     gulp.watch('banner/*.css', ['minify-css-flexslider']);
@@ -93,5 +88,4 @@ gulp.task('default', function () {
     //IMG FlexSlider
     gulp.watch('banner/img/*.jpg', ['minify-img-jpg-flexslider']);
     gulp.watch('banner/img/*.png', ['minify-img-png-flexslider']);
->>>>>>> felipe_developer
 });
