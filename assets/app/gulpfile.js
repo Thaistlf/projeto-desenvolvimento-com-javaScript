@@ -40,6 +40,42 @@ gulp.task('minify-img-png', function() {
 		.pipe(gulp.dest('../img'));
 });
 
+<<<<<<< HEAD
+=======
+//Javascript flexslider
+gulp.task('minify-js-flexslider', function (cb) {//task é uma tarefa, estamos criando uma tarefa
+  pump([
+        gulp.src('banner/*.js'),//caminho do arquivo que queremos fazer a tarefa
+        uglify(),//deixa o js feito, ex.: tira os nomes de nossas variaveis e coloca tudo como 'a' por exemplo, para assim o navegador renderizar mais rapido
+        gulp.dest('../banner')//locar de destino do arquivo
+    ],
+    cb
+  );
+});
+
+//CSS flexslider
+gulp.task('minify-css-flexslider', function() {
+  return gulp.src('banner/*.css')
+    .pipe(sourcemaps.init())
+    .pipe(cleanCSS({compatibility: 'ie8'}))
+    .pipe(sourcemaps.write())
+    .pipe(gulp.dest('../banner'));
+});
+
+//IMG
+gulp.task('minify-img-jpg-flexslider', function() {
+    gulp.src('banner/img/*.jpg')
+        .pipe(imagemin())
+        .pipe(gulp.dest('../banner/img'));
+});
+
+gulp.task('minify-img-png-flexslider', function() {
+    return gulp.src('banner/img/*.png')
+        .pipe(optipng({ optimizationLevel: 3 })())
+        .pipe(gulp.dest('../banner/img'));
+});
+
+>>>>>>> felipe_developer
 gulp.task('default', function () {
     //CSS 
     gulp.watch('css/*.css', ['minify-css']);
@@ -47,4 +83,15 @@ gulp.task('default', function () {
     gulp.watch('js/*.js', ['minify-js']);
     //IMG
     gulp.watch('img/*.jpg', ['minify-img-jpg']);
+<<<<<<< HEAD
+=======
+
+    //CSS FlexSlider
+    gulp.watch('banner/*.css', ['minify-css-flexslider']);
+    //JS FlexSlider
+    gulp.watch('banner/*.js', ['minify-js-flexslider']);
+    //IMG FlexSlider
+    gulp.watch('banner/img/*.jpg', ['minify-img-jpg-flexslider']);
+    gulp.watch('banner/img/*.png', ['minify-img-png-flexslider']);
+>>>>>>> felipe_developer
 });
