@@ -10,8 +10,8 @@
 /* clear */
 header::after, section::after, div::after, footer::after{
 	content: '';
-	display: block;
 	clear: both;
+	display: block;
 	height: 1px;
 	visibility: hidden;
 }
@@ -60,13 +60,13 @@ header > ul {
 
 /* Body */
 .container {
-    padding: 1rem 3rem 1rem 3rem;
     margin: 0 auto;
+    padding: 1rem 3rem 1rem 3rem;
 }
 /* Cols */
 .col-2, .col-3, .col-4, .col-6{
-    padding: 0px 15px 0px 15px;
     float: left;
+    padding: 0px 15px 0px 15px;
 }
 .col-2 {
     width: 50%;
@@ -79,4 +79,35 @@ header > ul {
 }
 .col-6 {
 	width: 16.66%;
+}
+
+/* Botoes */
+.btn {
+    background-color: #b9b9b9;
+    border-radius: 3px;
+    box-shadow: 0px 5px 0px #a1a1a1;
+    color: #000;
+    display: inline-block;
+    font-weight: bold;
+    margin-top: 15px;
+    padding: 10px 20px 10px 20px;
+    position: relative;
+    top: 0;
+    transition: all 0.3s;
+}
+.btn:hover {
+    box-shadow: none;
+    top: 5px;
+    transition: all 0.3s;
+}
+
+/* Footer */
+footer{
+	margin-top: 40px;
+}
+footer > .copyright {
+    background: #a1a1a1;
+    color: #000;
+    font-weight: bold;
+    text-align: center;
 }
