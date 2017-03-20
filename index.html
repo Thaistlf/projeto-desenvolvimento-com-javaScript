@@ -3,7 +3,10 @@
 	<head>
 		<meta charset="utf-8">
 		<title>Home</title>
+		<!-- style site -->
 		<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+		<!-- style banner -->
+		<link rel="stylesheet" type="text/css" href="assets/banner/flexslider.css">
 	</head>
 	<body>
 		<header class="header-site">
@@ -17,7 +20,19 @@
 			</nav>
 		</header>
 		<section class="banner">
-			
+			 <div class="flexslider">
+			  <ul class="slides">
+			    <li>
+			      <img src="assets/banner/img/slide1.jpg" />
+			    </li>
+			    <li>
+			      <img src="assets/banner/img/slide2.jpg" />
+			    </li>
+			    <li>
+			      <img src="assets/banner/img/slide3.jpg" />
+			    </li>
+			  </ul>
+			</div>
 		</section>
 		<div class="container">
 
@@ -25,6 +40,15 @@
 		<footer>
 			
 		</footer>
-		<script src="assets/main.js"></script>
+		<!-- scripts banner -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+		<script src="assets/banner/jquery.flexslider.js"></script>
+		<script>
+		  $(window).load(function() {
+		    $('.flexslider').flexslider();
+		  });
+		</script>
+		<!-- end scripts banner -->
+		<script src="assets/js/main.js"></script>
 	</body>
 </html>
